@@ -1,0 +1,260 @@
+/* ========== MAIN WRAPPER ========== */
+.mainWrapper {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ========== HEADER ========== */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.img {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  margin-right: 10px;
+  object-fit: cover;
+  background: #e50914;
+}
+
+.heading {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* ========== FORM CARD ========== */
+.formWrapper {
+  width: 100%;
+  max-width: 50%;
+  background-color: #121212;
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.formTitle {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* ========== INPUT FIELDS ========== */
+.input,
+.passwordInput {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-color: #1f1f1f;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.3s ease, transform 0.2s ease;
+}
+
+.input:focus,
+.passwordInput:focus {
+  border: 2px solid #e50914;
+  transform: scale(1.02);
+}
+
+::placeholder {
+  color: #aaa;
+}
+
+/* ========== PASSWORD FIELD ========== */
+.passwordWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.togglePasswordBtn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.togglePasswordBtn:hover {
+  background: #ff1e26;
+}
+
+/* ========== SUBMIT BUTTON ========== */
+.submitBtn {
+  background: #e50914;
+  color: #fff;
+  padding: 12px;
+  height: 50px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+  background: #ff1e26;
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 12px rgba(229, 9, 20, 0.6);
+}
+
+/* ========== ERROR & SUCCESS TEXT ========== */
+.errorText {
+  color: #ff4d4d;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.successText {
+  color: #4caf50;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* ========== SWITCH TEXT ========== */
+.switchText {
+  text-align: center;
+  margin-top: 10px;
+  color: #bbb;
+  font-size: 14px;
+}
+
+.signupLink {
+  color: #e50914;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.signupLink:hover {
+  color: #ff1e26;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablets (up to 992px) */
+@media (max-width: 992px) {
+  .formWrapper {
+    max-width: 70%;
+    padding: 20px 15px;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Mobile Devices (up to 768px) */
+@media (max-width: 768px) {
+  .mainWrapper {
+    height: 100vh;
+    padding: 30px 15px;
+  }
+
+  .formWrapper {
+    max-width: 90%;
+  }
+
+  .heading {
+    font-size: 22px;
+  }
+
+  .img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .submitBtn {
+    font-size: 15px;
+  }
+}
+
+/* Small Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+  .mainWrapper {
+    height: 100vh;
+    max-height: 80%;
+  }
+
+  .formWrapper {
+    max-width: 100%;
+    max-height: 80%;
+    padding: 15px 12px;
+  }
+
+  .heading {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .img {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .input,
+  .passwordInput {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .submitBtn {
+    font-size: 14px;
+    height: 45px;
+  }
+
+  .switchText {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,232 @@
+/* ========== MAIN WRAPPER ========== */
+.mainWrapper {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ========== HEADER ========== */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.img {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  margin-right: 10px;
+  object-fit: cover;
+  background: #e50914; /* Netflix red */
+}
+
+.headding {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* ========== FORM CARD ========== */
+.formWrapper {
+  width: 100%;
+  max-width: 50%;
+  background-color: #121212;
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* ========== INPUT FIELDS ========== */
+.formWrapper input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-color: #1f1f1f;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.3s ease, transform 0.2s ease;
+}
+
+.formWrapper input:focus {
+  border: 2px solid #e50914;
+  transform: scale(1.02);
+}
+
+::placeholder {
+  color: #aaa;
+}
+
+/* ========== SUBMIT BUTTON ========== */
+.formWrapper button {
+  background: #e50914;
+  color: #fff;
+  padding: 12px;
+  height: 50px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.formWrapper button:hover {
+  background: #ff1e26;
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 12px rgba(229, 9, 20, 0.6);
+}
+
+/* ========== LOADING ICON INSIDE BUTTON ========== */
+.formWrapper button i {
+  margin-right: 8px;
+}
+
+/* ========== PREVIEW IMAGE (UPLOADED LOGO) ========== */
+.previewImg {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 2px solid #e50914;
+  margin-top: 5px;
+}
+
+.errorText {
+  color: #fff;
+}
+
+/* ========== SWITCH TEXT (Login redirect) ========== */
+.switchText {
+  text-align: center;
+  margin-top: 10px;
+  color: #bbb;
+  font-size: 14px;
+}
+
+.switchText small {
+  color: #bbb;
+  font-size: 1rem;
+}
+
+.switchText span {
+  color: #e50914;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.switchText span:hover {
+  color: #ff1e26;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablets (up to 992px) */
+@media (max-width: 992px) {
+  .formWrapper {
+    max-width: 70%;
+    padding: 20px 15px;
+  }
+
+  .headding {
+    font-size: 24px;
+  }
+
+  .img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Mobile Devices (up to 768px) */
+@media (max-width: 768px) {
+  .mainWrapper {
+    height: 100vh;
+    padding: 30px 15px;
+  }
+
+  .formWrapper {
+    max-width: 90%;
+  }
+  .headding {
+    font-size: 22px;
+  }
+
+  .img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .formWrapper button {
+    font-size: 15px;
+  }
+}
+
+/* Small Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+  .mainWrapper{
+      height: 100vh;
+      max-height: 80%;
+
+  }
+  .formWrapper {
+    max-width: 100%;
+    max-height: 80%;
+    padding: 15px 12px;
+  }
+
+  .headding {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .img {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .formWrapper input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .formWrapper button {
+    font-size: 14px;
+    height: 45px;
+  }
+
+  .switchText {
+    font-size: 13px;
+  }
+}
