@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "./Home.module.css";
 import { useNavigate } from "react-router-dom";
+import LoadingScreen from "../../LoadingScreen"
 
 
 const Home = () => {
@@ -25,7 +26,7 @@ const Home = () => {
     fetchVideos();
   }, []);
 
-  if (loading) return <p className={styles.loading}>Loading videos...</p>;
+  if (loading) return <LoadingScreen />;
 
   return (
     <div className={styles.homeContainer}>
